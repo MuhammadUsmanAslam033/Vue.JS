@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+       <style>
+    .demo {
+            font-family: sans-serif;
+            border: 1px solid #eee;
+            border-radius: 2px;
+            padding: 20px 30px;
+            margin-top: 1em;
+            margin-bottom: 40px;
+            user-select: none;
+            overflow-x: auto;
+          }
+          </style>
+    </head>
+    <body>
+        <div id="components-demo">
+            <button-counter></button-counter>
+          </div>
+          <script>
+// Create a Vue application
+const app = Vue.createApp({})
+
+// Define a new global component called button-counter
+app.component('button-counter', {
+  data() {
+    return {
+      count: 0
+    }
+  },
+  template: `
+    <button v-on:click="count++">
+      You clicked me {{ count }} times.
+    </button>`
+})
+
+app.mount('#components-demo')
+
+          </script>
+        </body>
