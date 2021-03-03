@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <style>
+
+     </style>
+     <body>
+    <div id="basic-event">
+    <button @click="counter += 1">Add 1</button>
+    <p>The button above has been clicked {{ counter }} times.</p>
+  </div>
+  <script>
+      Vue.createApp({
+  data() {
+    return {
+      counter: 0
+    }
+  }
+}).mount('#basic-event')
+  </script>
+  </body>
